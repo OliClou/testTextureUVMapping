@@ -24,15 +24,24 @@ class Application : public ofBaseApp{
 
 		ofxAssimpModelLoader model;
 		ofEasyCam cam;
+		ofShader shader;
+		
+		float rotationSpeed = 0.0f;
+
+		// Pour le model 3D du pingouin
+		ofMesh texturedMesh;
 		ofImage penguinTexture;
 
-		ofShader shader;
 
-		ofMesh texturedMesh;
+		// Pour la sphere texturé
+		ofSpherePrimitive texturedSphere;
+		ofTexture sphereTexture; // J'utilise ofTexture ici juste pour montrer qu'on peut utiliser soit ofImage ou ofTexture. Les deux marche.
+		glm::vec3 spherePosition = glm::vec3(400, 0, 0); // On positionne la sphere à droite du pingouin
 
-		float penguinRotation = 0.0f;
 
-
-
-		
+		// Pour un autre sphere texturé en utilisant le shader de base de openFrameworks
+		ofSpherePrimitive sphereNoShader;
+		ofImage sphereNoShaderTexture;
+		glm::vec3 sphereNoShaderPos = glm::vec3(-400, 0, 0); // On positionne la sphere à la gauche du pingouin
+	
 };
