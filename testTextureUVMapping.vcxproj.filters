@@ -423,4 +423,7 @@
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="bin\data\textures\Penguin_Diffuse_Color.png" />
+  </ItemGroup>
 </Project>
