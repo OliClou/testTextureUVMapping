@@ -22,7 +22,7 @@ void main() {
 
     vec3 viewDir = normalize(viewPos - vPosition);
     vec3 reflectDir = reflect(-light, norm);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 120.0); // on peut modifier la dernière valeur ici (120.0) pour un effet de brillance plus fort / moins fort
     vec3 specular = lightColor * spec * 0.5;
 
     vec3 finalLight = ambient + diffuse + specular;

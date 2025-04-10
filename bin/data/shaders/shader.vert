@@ -10,7 +10,6 @@ out vec3 vPosition;
 
 uniform mat4 modelViewProjectionMatrix;
 uniform mat4 modelMatrix;
-uniform mat3 normalMatrix;
 
 void main() {
     vTexCoord = texcoord;
